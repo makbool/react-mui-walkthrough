@@ -1,23 +1,41 @@
-import logo from './logo.svg';
 import './App.css';
+import { Button, Container, Typography } from '@mui/material';
+import { Person } from '@material-ui/icons';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Container>
+        <Typography
+          variant="h6"
+          color="primary"
+          component="div"
         >
-          Learn React
-        </a>
-      </header>
+          h6 styled div tag
+        </Typography>
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<Person />}
+        >
+          <Typography
+            variant="button"
+          >
+            Hello
+          </Typography>
+        </Button>
+        <Button
+          type="submit"
+          variant="contained"
+          color="primary"
+        >
+          <Typography
+            variant="button"
+          >
+            Submit
+          </Typography>
+        </Button>
+      </Container>
     </div>
   );
 }
